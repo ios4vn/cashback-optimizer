@@ -193,6 +193,11 @@ select:focus { border-color: var(--accent); }
     padding: 6px 8px; font-size: 0.55rem; color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
+.card-visual-img {
+    width: 80px; min-width: 80px; height: 50px;
+    border-radius: 6px; object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
 .card-visual .cv-bank { font-weight: 700; font-size: 0.6rem; opacity: 0.9; }
 .card-visual .cv-chip {
     width: 14px; height: 10px; background: rgba(255,255,255,0.3);

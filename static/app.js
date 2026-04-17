@@ -350,6 +350,9 @@ document.getElementById('btn-save-manual').addEventListener('click', () => {
 // ===== My Cards =====
 function cardVisual(card) {
     const color = card.color || '#333';
+    if (card.image) {
+        return `<img class="card-visual-img" src="${card.image}" alt="${card.bank} ${card.name}" loading="lazy">`;
+    }
     return `<div class="card-visual" style="background:linear-gradient(135deg, ${color}, ${color}dd)">
         <div class="cv-bank">${card.bank}</div>
         <div class="cv-chip"></div>

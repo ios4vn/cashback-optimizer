@@ -43,7 +43,8 @@
       }
     ],
     "min_income": 9000000,
-    "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/cashback/"
+    "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/cashback/",
+    "image": "https://www.hsbc.com.vn/content/dam/hsbc/hbvn/images/credit-cards/16-9/16210-hsbc-cashback-vertical-front-grey-1600x900.jpg"
   },
   {
     "id": "hsbc-liveplus",
@@ -83,7 +84,8 @@
       }
     ],
     "min_income": 9000000,
-    "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/liveplus/"
+    "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/liveplus/",
+    "image": "https://www.hsbc.com.vn/content/dam/hsbc/hbvn/images/credit-cards/16-9/15420-hsbc-cashback-digital-vertical-front-1600x900.jpg"
   },
   {
     "id": "techcombank-visa-signature",
@@ -122,7 +124,8 @@
     ],
     "min_income": 15000000,
     "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-visa-signature",
-    "notes": "Tích điểm U-Points quy đổi, FX fee chỉ 1.1%"
+    "notes": "Tích điểm U-Points quy đổi, FX fee chỉ 1.1%",
+    "image": "https://techcombank.com/content/dam/techcombank/public-site/image-card/img-tcb-visa-signature-credit-card.jpg.rendition/cq5dam.web.256.256.jpeg"
   },
   {
     "id": "techcombank-everyday",
@@ -155,7 +158,8 @@
     ],
     "min_income": 5000000,
     "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-everyday",
-    "notes": "Tích điểm U-Points quy đổi"
+    "notes": "Tích điểm U-Points quy đổi",
+    "image": "https://techcombank.com/content/dam/techcombank/public-site/com_img/img-tcb-every-day-credit-card.jpg.rendition/cq5dam.web.256.256.jpeg"
   },
   {
     "id": "techcombank-spark",
@@ -181,7 +185,8 @@
       }
     ],
     "min_income": 10000000,
-    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-style"
+    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-style",
+    "image": "https://techcombank.com/content/dam/techcombank/public-site/imported-assets/card-3-850f67eade-a75c15204d.png.rendition/cq5dam.web.256.256.png"
   },
   {
     "id": "vib-cashback",
@@ -213,7 +218,8 @@
       }
     ],
     "min_income": 7000000,
-    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-cashback/"
+    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-cashback/",
+    "image": "https://www.vib.com.vn/wps/wcm/connect/b6c12b36-6ee7-4e83-98a2-179daf03f31c/maxcard_front_new_1.webp?MOD=AJPERES"
   },
   {
     "id": "vib-online-plus",
@@ -239,7 +245,8 @@
       }
     ],
     "min_income": 5000000,
-    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-online-plus-2in1/"
+    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-online-plus-2in1/",
+    "image": "https://www.vib.com.vn/wps/wcm/connect/af3984c2-0d7e-4799-b549-0780a3b94012/Th%E1%BA%BB+t%C3%ADn+d%E1%BB%A5ng+VIB+Online+Plus+2in1.webp?MOD=AJPERES"
   },
   {
     "id": "vib-supercard",
@@ -278,7 +285,8 @@
     ],
     "min_income": 10000000,
     "url": "https://www.vib.com.vn/en/the-tin-dung/vib-supercard/",
-    "notes": "Chọn 1 trong 6 danh mục: GD nước ngoài 15%, Ẩm thực/Du lịch/Mua sắm 10%, Online 5%. Cap 1tr điểm/kỳ"
+    "notes": "Chọn 1 trong 6 danh mục: GD nước ngoài 15%, Ẩm thực/Du lịch/Mua sắm 10%, Online 5%. Cap 1tr điểm/kỳ",
+    "image": "https://www.vib.com.vn/wps/wcm/connect/e7ef2378-58e1-4e68-ade9-acabebcfd738/Th%E1%BA%BB+t%C3%ADn+d%E1%BB%A5ng+VIB+Rewards+Unlimited.webp?MOD=AJPERES"
   },
   {
     "id": "vib-financial-free",
@@ -310,7 +318,8 @@
       }
     ],
     "min_income": 7000000,
-    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-financial-free/"
+    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-financial-free/",
+    "image": "https://www.vib.com.vn/wps/wcm/connect/42b77580-2bb6-4cf1-be84-c1f2d429de87/Th%E1%BA%BB+t%C3%ADn+d%E1%BB%A5ng+VIB+Premier+Boundless.webp?MOD=AJPERES"
   },
   {
     "id": "vpbank-step-up",
@@ -348,7 +357,8 @@
       }
     ],
     "min_income": 7000000,
-    "url": "https://www.vpbank.com.vn/the-tin-dung/vpbank-step-up"
+    "url": "https://www.vpbank.com.vn/the-tin-dung/vpbank-step-up",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/0-dich-vu-the/cards/vpbank-mwg-mastercard-credit/350x200--1-.jpg"
   },
   {
     "id": "vpbank-mwg",
@@ -375,7 +385,8 @@
     ],
     "min_income": 5000000,
     "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/the-tin-dung-MWG-Mastercard",
-    "notes": "Hoàn tiền 10% tại hệ sinh thái MWG"
+    "notes": "Hoàn tiền 10% tại hệ sinh thái MWG",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/0-dich-vu-the/cards/vpbank-mwg-mastercard-credit/350x200--1-.jpg"
   },
   {
     "id": "vpbank-z-jcb",
@@ -396,7 +407,8 @@
     ],
     "min_income": 5000000,
     "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/the-tin-dung-z",
-    "notes": "Dành cho Gen Z, 10% mọi chi tiêu"
+    "notes": "Dành cho Gen Z, 10% mọi chi tiêu",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/0-dich-vu-the/cards/genz_2022/380-x-239.jpg"
   },
   {
     "id": "vpbank-diamond",
@@ -417,7 +429,8 @@
     ],
     "min_income": 30000000,
     "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/diamond-world",
-    "notes": "Dành cho KH Diamond, hạn mức đến 1 tỷ"
+    "notes": "Dành cho KH Diamond, hạn mức đến 1 tỷ",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/0-dich-vu-the/cards/vpbank-mwg-mastercard-credit/350x200--1-.jpg"
   },
   {
     "id": "tpbank-jcb-cashback",
@@ -561,7 +574,8 @@
       }
     ],
     "min_income": 10000000,
-    "url": "https://www.sacombank.com.vn/en/card/Pages/1-Visa-Signature.aspx"
+    "url": "https://www.sacombank.com.vn/en/card/Pages/1-Visa-Signature.aspx",
+    "image": "https://www.sacombank.com.vn/content/dam/sacombank/images/the-new/the-tin-dung/Listing-Visa-Credit-Signature_contactless-01.png"
   },
   {
     "id": "sacombank-amex",
@@ -600,7 +614,8 @@
     ],
     "min_income": 10000000,
     "url": "https://www.sacombank.com.vn/en/personal/cards/credit-cards/the-tin-dung-sacombank-platinum-american-express.html",
-    "notes": "Hoàn tiền đến 12tr/năm. 20% vé máy bay/KS, 10% GD nước ngoài POS, 5% e-commerce ngoại tệ. FX 1.99%"
+    "notes": "Hoàn tiền đến 12tr/năm. 20% vé máy bay/KS, 10% GD nước ngoài POS, 5% e-commerce ngoại tệ. FX 1.99%",
+    "image": "https://www.sacombank.com.vn/content/dam/sacombank/images/the-new/the-tin-dung/Listing-Visa-Infinite_contactless-01.png"
   },
   {
     "id": "mb-sakura",
@@ -961,7 +976,8 @@
     ],
     "min_income": 10000000,
     "url": "https://www.sc.com/vn/the-tin-dung",
-    "notes": "1% unlimited không giới hạn, không điều kiện"
+    "notes": "1% unlimited không giới hạn, không điều kiện",
+    "image": "https://av.sc.com/vn/content/images/vn-cc-pintitle-simply-card-600x600-1.jpg"
   },
   {
     "id": "liobank-cashback",
@@ -1074,7 +1090,8 @@
     "min_income": 5000000,
     "url": "https://www.vpbank.com.vn/ca-nhan/the-tin-dung",
     "notes": "Tích điểm 10% gaming, streaming, giải trí số",
-    "reward_type": "points"
+    "reward_type": "points",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/0-dich-vu-the/cards/vpbank-gameon-mastercard/350x200--1-.jpg"
   },
   {
     "id": "vpbank-s-rewards",
@@ -1102,7 +1119,8 @@
     "min_income": 5000000,
     "url": "https://www.vpbank.com.vn/ca-nhan/the-tin-dung",
     "notes": "12% Shopee xu, tặng gói ShopeeVIP 12 tháng",
-    "reward_type": "shopee_coins"
+    "reward_type": "shopee_coins",
+    "image": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/picture/cards/the-shopee-mastercard/350x200--1-.jpg"
   },
   {
     "id": "sc-journey",
@@ -1130,7 +1148,8 @@
     "min_income": 20000000,
     "url": "https://www.sc.com/vn/credit-cards/",
     "notes": "Tích dặm Bông Sen Vàng, phòng chờ sân bay",
-    "reward_type": "miles"
+    "reward_type": "miles",
+    "image": "https://av.sc.com/vn/content/images/vn-crdit-card-journey-pintitle400x400.jpg"
   },
   {
     "id": "vib-max-card",
@@ -1158,7 +1177,8 @@
     "min_income": 7000000,
     "url": "https://www.vib.com.vn/vn/the-tin-dung",
     "notes": "Hoàn 10% đến 18tr/năm, chọn 4 gói hội viên + 5 danh mục chi tiêu",
-    "reward_type": "points"
+    "reward_type": "points",
+    "image": "https://www.vib.com.vn/wps/wcm/connect/b6c12b36-6ee7-4e83-98a2-179daf03f31c/maxcard_front_new_1.webp?MOD=AJPERES"
   },
   {
     "id": "sacombank-jcb-ultimate",
@@ -1186,7 +1206,8 @@
     "min_income": 15000000,
     "url": "https://www.sacombank.com.vn/ca-nhan/the/the-tin-dung.html",
     "notes": "Hoàn 15% ăn uống, đặc quyền JCB Ultimate",
-    "reward_type": "cashback"
+    "reward_type": "cashback",
+    "image": "https://www.sacombank.com.vn/content/dam/sacombank/images/the-new/the-tin-dung/Listing-06.12.2018_JCB-Ultimate_FA-01.png"
   },
   {
     "id": "tpbank-evo",
@@ -1349,7 +1370,8 @@
     ],
     "min_income": 10000000,
     "url": "https://www.msb.com.vn/ca-nhan/the",
-    "notes": "Hoàn tiền đến 12tr/năm, thế giới ưu đãi JOY"
+    "notes": "Hoàn tiền đến 12tr/năm, thế giới ưu đãi JOY",
+    "image": "https://www.msb.com.vn/msb-website/2026/01/MSB-Visa-Signature-1024x455.jpg"
   },
   {
     "id": "msb-visa-online",
@@ -1376,7 +1398,8 @@
     ],
     "min_income": 5000000,
     "url": "https://www.msb.com.vn/ca-nhan/the",
-    "notes": "Hoàn tiền cho mọi chi tiêu online"
+    "notes": "Hoàn tiền cho mọi chi tiêu online",
+    "image": "https://www.msb.com.vn/msb-website/2026/01/MSB-Super-Free-1024x455.jpg"
   },
   {
     "id": "msb-mastercard-mdigi",
@@ -1403,7 +1426,8 @@
     ],
     "min_income": 5000000,
     "url": "https://www.msb.com.vn/ca-nhan/the",
-    "notes": "Hoàn tiền đa lĩnh vực, thế giới ưu đãi JOY"
+    "notes": "Hoàn tiền đa lĩnh vực, thế giới ưu đãi JOY",
+    "image": "https://www.msb.com.vn/msb-website/2026/01/MSB-Mastercard-Hybrid_1-scaled.jpg"
   },
   {
     "id": "msb-mc-world-elite",
@@ -1430,7 +1454,8 @@
     ],
     "min_income": 30000000,
     "url": "https://www.msb.com.vn/ca-nhan/the",
-    "notes": "Đặc quyền giao dịch toàn cầu, phòng chờ sân bay không giới hạn"
+    "notes": "Đặc quyền giao dịch toàn cầu, phòng chờ sân bay không giới hạn",
+    "image": "https://www.msb.com.vn/msb-website/2026/01/IMAGE-1024x455.jpg"
   },
   {
     "id": "msb-mc-green-world",
@@ -1463,6 +1488,7 @@
     ],
     "min_income": 7000000,
     "url": "https://www.msb.com.vn/ca-nhan/the",
-    "notes": "Ưu đãi di chuyển xanh, voucher xanh SM, phòng chờ sân bay"
+    "notes": "Ưu đãi di chuyển xanh, voucher xanh SM, phòng chờ sân bay",
+    "image": "https://www.msb.com.vn/msb-website/2026/01/MSB-Mastercard-Green-World-scaled.jpg"
   }
 ]
