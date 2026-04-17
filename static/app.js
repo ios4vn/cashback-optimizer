@@ -433,25 +433,38 @@ document.querySelectorAll('.chip[data-amount]').forEach(btn => {
 
 // ===== PWA Install =====
 let deferredPrompt = null;
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+function showInstallBanner() {
+    if (!isStandalone && !localStorage.getItem('cb_dismiss_install')) {
+        document.getElementById('install-banner').classList.remove('hidden');
+    }
+}
 
 window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
     deferredPrompt = e;
-    if (!localStorage.getItem('cb_dismiss_install')) {
-        document.getElementById('install-banner').classList.remove('hidden');
-    }
+    showInstallBanner();
 });
+
+// Show banner on iOS/other browsers too (after short delay)
+setTimeout(() => { if (!deferredPrompt) showInstallBanner(); }, 2000);
 
 document.getElementById('btn-install')?.addEventListener('click', async () => {
     if (deferredPrompt) {
         deferredPrompt.prompt();
         await deferredPrompt.userChoice;
         deferredPrompt = null;
+        document.getElementById('install-banner').classList.add('hidden');
     } else {
-        // iOS fallback — show instructions
-        alert('Trên Safari: nhấn nút Chia sẻ (⬆️) → "Thêm vào Màn hình chính"');
+        // iOS / other browsers — show instructions
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        if (isIOS) {
+            alert('Trên Safari:\n1. Nhấn nút Chia sẻ (⬆️) ở thanh dưới\n2. Kéo xuống chọn "Thêm vào Màn hình chính"');
+        } else {
+            alert('Trên trình duyệt:\n1. Nhấn menu ⋮ (3 chấm) góc trên phải\n2. Chọn "Thêm vào Màn hình chính" hoặc "Install app"');
+        }
     }
-    document.getElementById('install-banner').classList.add('hidden');
 });
 
 document.getElementById('btn-dismiss-install')?.addEventListener('click', () => {
