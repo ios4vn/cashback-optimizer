@@ -2,81 +2,215 @@
   {
     "id": "hsbc-cashback",
     "bank": "HSBC",
-    "name": "HSBC Cash Back",
+    "name": "Cash Back",
     "network": "Visa",
     "tier": "Platinum",
     "annual_fee": 800000,
     "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#db0011",
     "cashback_rules": [
-      {"category": "supermarket", "label": "Siêu thị & Tạp hóa", "rate": 6, "rate_payroll": 8, "cap_monthly": 200000},
-      {"category": "taxi", "label": "Taxi & Limousine", "rate": 6, "rate_payroll": 8, "cap_monthly": 200000},
-      {"category": "healthcare", "label": "Y tế", "rate": 1, "cap_monthly": null},
-      {"category": "education", "label": "Giáo dục", "rate": 1, "cap_monthly": null},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.3, "cap_monthly": null}
+      {
+        "category": "supermarket",
+        "label": "Siêu thị & Tạp hóa",
+        "rate": 6,
+        "rate_payroll": 8,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "taxi",
+        "label": "Taxi & Limousine",
+        "rate": 6,
+        "rate_payroll": 8,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "healthcare",
+        "label": "Y tế",
+        "rate": 1,
+        "cap_monthly": null
+      },
+      {
+        "category": "education",
+        "label": "Giáo dục",
+        "rate": 1,
+        "cap_monthly": null
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
     ],
     "min_income": 9000000,
     "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/cashback/"
   },
   {
+    "id": "hsbc-liveplus",
+    "bank": "HSBC",
+    "name": "Live+",
+    "network": "Visa",
+    "tier": "Signature",
+    "annual_fee": 800000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#db0011",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 6,
+        "rate_payroll": 8,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "online",
+        "label": "Mua sắm",
+        "rate": 6,
+        "rate_payroll": 8,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "entertainment",
+        "label": "Giải trí",
+        "rate": 1,
+        "cap_monthly": null
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 9000000,
+    "url": "https://www.hsbc.com.vn/en-vn/credit-cards/products/liveplus/"
+  },
+  {
     "id": "techcombank-visa-signature",
     "bank": "Techcombank",
-    "name": "Techcombank Visa Signature",
+    "name": "Visa Signature",
     "network": "Visa",
     "tier": "Signature",
     "annual_fee": 1499000,
-    "annual_fee_waiver": "Miễn phí năm đầu",
+    "annual_fee_waiver": "Hoàn phí năm đầu khi chi tiêu 5tr/30 ngày",
+    "color": "#e4002b",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 10, "cap_monthly": 500000},
-      {"category": "hotel", "label": "Khách sạn", "rate": 10, "cap_monthly": 500000},
-      {"category": "travel", "label": "Du lịch", "rate": 10, "cap_monthly": 500000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "dining",
+        "label": "Ăn uống (đối tác)",
+        "rate": 10,
+        "cap_monthly": 3000000
+      },
+      {
+        "category": "hotel",
+        "label": "Khách sạn",
+        "rate": 3,
+        "cap_monthly": 3000000
+      },
+      {
+        "category": "travel",
+        "label": "Du lịch",
+        "rate": 3,
+        "cap_monthly": 3000000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
     ],
     "min_income": 15000000,
-    "notes": "Bảo hiểm du lịch lên đến 10.5 tỷ VND",
-    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-visa-signature"
+    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-visa-signature",
+    "notes": "Tích điểm U-Points quy đổi, FX fee chỉ 1.1%"
   },
   {
     "id": "techcombank-everyday",
     "bank": "Techcombank",
-    "name": "Techcombank Everyday",
+    "name": "Everyday",
     "network": "Visa",
     "tier": "Classic",
-    "annual_fee": 0,
-    "annual_fee_waiver": "Miễn phí",
+    "annual_fee": 599000,
+    "annual_fee_waiver": "Hoàn phí khi chi tiêu 1.5tr tháng đầu",
+    "color": "#e4002b",
     "cashback_rules": [
-      {"category": "online", "label": "Mua sắm online", "rate": 8, "cap_monthly": 300000, "note": "Tích điểm quy đổi"},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "online",
+        "label": "Online quốc tế",
+        "rate": 8,
+        "cap_monthly": 250000
+      },
+      {
+        "category": "dining",
+        "label": "Nhà hàng",
+        "rate": 1,
+        "cap_monthly": 250000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
-    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-everyday"
+    "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-everyday",
+    "notes": "Tích điểm U-Points quy đổi"
   },
   {
     "id": "techcombank-spark",
     "bank": "Techcombank",
-    "name": "Techcombank Spark",
+    "name": "Spark",
     "network": "Visa",
     "tier": "Platinum",
-    "annual_fee": 0,
-    "annual_fee_waiver": "Miễn phí",
+    "annual_fee": 899000,
+    "annual_fee_waiver": "Miễn phí cho Priority/Inspire",
+    "color": "#e4002b",
     "cashback_rules": [
-      {"category": "custom", "label": "Danh mục tự chọn (1 trong 5)", "rate": 8, "cap_monthly": 300000, "note": "Chọn 1 danh mục yêu thích"},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "custom",
+        "label": "Danh mục tự chọn (1 trong 5)",
+        "rate": 8,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
     ],
-    "min_income": 5000000,
+    "min_income": 10000000,
     "url": "https://techcombank.com/en/personal/spend/cards/credit-card/techcombank-style"
   },
   {
     "id": "vib-cashback",
     "bank": "VIB",
-    "name": "VIB Cash Back",
+    "name": "Cash Back",
     "network": "Mastercard",
     "tier": "Platinum",
     "annual_fee": 699000,
-    "annual_fee_waiver": "Miễn phí năm đầu khi chi tiêu đủ",
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#003087",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 5, "cap_monthly": 500000},
-      {"category": "online", "label": "Mua sắm online", "rate": 3, "cap_monthly": 300000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 1, "cap_monthly": 200000}
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 5,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 5,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 1,
+        "cap_monthly": 200000
+      }
     ],
     "min_income": 7000000,
     "url": "https://www.vib.com.vn/en/the-tin-dung/vib-cashback/"
@@ -84,130 +218,1251 @@
   {
     "id": "vib-online-plus",
     "bank": "VIB",
-    "name": "VIB Online Plus 2in1",
+    "name": "Online Plus 2in1",
     "network": "Mastercard",
     "tier": "Platinum",
     "annual_fee": 0,
     "annual_fee_waiver": "Miễn phí",
+    "color": "#003087",
     "cashback_rules": [
-      {"category": "online", "label": "Mua sắm online", "rate": 5, "cap_monthly": 300000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 5,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
     "url": "https://www.vib.com.vn/en/the-tin-dung/vib-online-plus-2in1/"
   },
   {
+    "id": "vib-supercard",
+    "bank": "VIB",
+    "name": "SuperCard",
+    "network": "Mastercard",
+    "tier": "Premium",
+    "annual_fee": 999000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#003087",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "GD nước ngoài (tự chọn)",
+        "rate": 15,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "dining",
+        "label": "Ẩm thực (tự chọn)",
+        "rate": 10,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "online",
+        "label": "GD trực tuyến (tự chọn)",
+        "rate": 5,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-supercard/",
+    "notes": "Chọn 1 trong 6 danh mục: GD nước ngoài 15%, Ẩm thực/Du lịch/Mua sắm 10%, Online 5%. Cap 1tr điểm/kỳ"
+  },
+  {
+    "id": "vib-financial-free",
+    "bank": "VIB",
+    "name": "Financial Free",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#003087",
+    "cashback_rules": [
+      {
+        "category": "education",
+        "label": "Giáo dục",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "healthcare",
+        "label": "Y tế & Bảo hiểm",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 7000000,
+    "url": "https://www.vib.com.vn/en/the-tin-dung/vib-financial-free/"
+  },
+  {
     "id": "vpbank-step-up",
     "bank": "VPBank",
-    "name": "VPBank StepUp",
+    "name": "StepUp",
     "network": "Visa",
     "tier": "Platinum",
     "annual_fee": 499000,
     "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#00843d",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 3, "cap_monthly": 300000},
-      {"category": "online", "label": "Mua sắm online", "rate": 3, "cap_monthly": 300000},
-      {"category": "travel", "label": "Du lịch & Đặt phòng", "rate": 3, "cap_monthly": 300000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 1, "cap_monthly": 200000}
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "travel",
+        "label": "Du lịch",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 1,
+        "cap_monthly": 200000
+      }
     ],
     "min_income": 7000000,
     "url": "https://www.vpbank.com.vn/the-tin-dung/vpbank-step-up"
   },
   {
-    "id": "tpbank-evo",
-    "bank": "TPBank",
-    "name": "TPBank EVO",
-    "network": "Visa",
-    "tier": "Platinum",
+    "id": "vpbank-mwg",
+    "bank": "VPBank",
+    "name": "MWG Mastercard",
+    "network": "Mastercard",
+    "tier": "Standard",
     "annual_fee": 0,
     "annual_fee_waiver": "Miễn phí",
+    "color": "#00843d",
     "cashback_rules": [
-      {"category": "online", "label": "Mua sắm online", "rate": 3, "cap_monthly": 200000},
-      {"category": "dining", "label": "Ăn uống", "rate": 1, "cap_monthly": 100000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.1, "cap_monthly": null}
+      {
+        "category": "supermarket",
+        "label": "TGDĐ/ĐMX/BHX",
+        "rate": 10,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
-    "url": "https://tpb.vn/the-tin-dung/tpbank-evo"
+    "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/the-tin-dung-MWG-Mastercard",
+    "notes": "Hoàn tiền 10% tại hệ sinh thái MWG"
+  },
+  {
+    "id": "vpbank-z-jcb",
+    "bank": "VPBank",
+    "name": "Z JCB",
+    "network": "JCB",
+    "tier": "Standard",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#00843d",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 10,
+        "cap_monthly": 300000
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/the-tin-dung-z",
+    "notes": "Dành cho Gen Z, 10% mọi chi tiêu"
+  },
+  {
+    "id": "vpbank-diamond",
+    "bank": "VPBank",
+    "name": "Diamond World",
+    "network": "Mastercard",
+    "tier": "World",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#00843d",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 10,
+        "cap_monthly": 1000000
+      }
+    ],
+    "min_income": 30000000,
+    "url": "https://www.vpbank.com.vn/en/ca-nhan/the-tin-dung/diamond-world",
+    "notes": "Dành cho KH Diamond, hạn mức đến 1 tỷ"
   },
   {
     "id": "tpbank-jcb-cashback",
     "bank": "TPBank",
-    "name": "TPBank JCB CashBack",
+    "name": "JCB CashBack",
     "network": "JCB",
     "tier": "Platinum",
     "annual_fee": 0,
     "annual_fee_waiver": "Miễn phí",
+    "color": "#6a1b9a",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 10, "cap_monthly": 300000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.3, "cap_monthly": null}
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
-    "notes": "Giảm đến 30% tại nhà hàng, miễn phí phòng chờ sân bay",
     "url": "https://tpb.vn/the-tin-dung/tpbank-jcb-cashback"
   },
   {
-    "id": "acb-cashback",
-    "bank": "ACB",
-    "name": "ACB Visa Cashback",
-    "network": "Visa",
-    "tier": "Platinum",
-    "annual_fee": 500000,
+    "id": "tpbank-fest",
+    "bank": "TPBank",
+    "name": "Mastercard FEST",
+    "network": "Mastercard",
+    "tier": "Standard",
+    "annual_fee": 0,
     "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#6a1b9a",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 3, "cap_monthly": 300000},
-      {"category": "supermarket", "label": "Siêu thị", "rate": 3, "cap_monthly": 300000},
-      {"category": "fuel", "label": "Xăng dầu", "rate": 3, "cap_monthly": 100000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
-    ],
-    "min_income": 7000000,
-    "url": "https://www.acb.com.vn/the-tin-dung"
-  },
-  {
-    "id": "sacombank-cashback",
-    "bank": "Sacombank",
-    "name": "Sacombank Visa Cashback",
-    "network": "Visa",
-    "tier": "Platinum",
-    "annual_fee": 400000,
-    "annual_fee_waiver": "Miễn phí năm đầu",
-    "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 3, "cap_monthly": 200000},
-      {"category": "fuel", "label": "Xăng dầu", "rate": 3, "cap_monthly": 100000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "entertainment",
+        "label": "Vé phim & Streaming",
+        "rate": 20,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
-    "url": "https://www.sacombank.com.vn/the-tin-dung"
+    "url": "https://tpb.vn/the-tin-dung/tpbank-mastercard-fest",
+    "notes": "20% hoàn tiền CGV, Lotte Cinema, Netflix, Spotify"
+  },
+  {
+    "id": "acb-visa-platinum",
+    "bank": "ACB",
+    "name": "Visa Platinum",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 1299000,
+    "annual_fee_waiver": "",
+    "color": "#1a237e",
+    "cashback_rules": [
+      {
+        "category": "supermarket",
+        "label": "Siêu thị (nhận lương ACB)",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "supermarket",
+        "label": "Siêu thị (thường)",
+        "rate": 6,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 7000000,
+    "url": "https://acb.com.vn/en/personal-cards/acb-visa-platinum"
+  },
+  {
+    "id": "acb-visa-signature",
+    "bank": "ACB",
+    "name": "Visa Signature",
+    "network": "Visa",
+    "tier": "Signature",
+    "annual_fee": 1900000,
+    "annual_fee_waiver": "",
+    "color": "#1a237e",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Du lịch & Khách sạn",
+        "rate": 10,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 15000000,
+    "url": "https://acb.com.vn/en/personal-cards/acb-visa-signature",
+    "notes": "Phòng chờ sân bay quốc tế 1 lần/quý"
+  },
+  {
+    "id": "sacombank-visa-cashback",
+    "bank": "Sacombank",
+    "name": "Visa Platinum Cashback",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 599000,
+    "annual_fee_waiver": "",
+    "color": "#0d47a1",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Thanh toán online",
+        "rate": 5,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "travel",
+        "label": "GD nước ngoài (POS)",
+        "rate": 3,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.sacombank.com.vn/en/card/Pages/1-Visa-Signature.aspx"
+  },
+  {
+    "id": "sacombank-amex",
+    "bank": "Sacombank",
+    "name": "Platinum Amex",
+    "network": "Amex",
+    "tier": "Platinum",
+    "annual_fee": 599000,
+    "annual_fee_waiver": "",
+    "color": "#0d47a1",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Vé máy bay & Khách sạn",
+        "rate": 20,
+        "cap_monthly": 1000000
+      },
+      {
+        "category": "travel",
+        "label": "GD nước ngoài (POS)",
+        "rate": 10,
+        "cap_monthly": 1000000
+      },
+      {
+        "category": "online",
+        "label": "E-commerce ngoại tệ",
+        "rate": 5,
+        "cap_monthly": 1000000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.sacombank.com.vn/en/personal/cards/credit-cards/the-tin-dung-sacombank-platinum-american-express.html",
+    "notes": "Hoàn tiền đến 12tr/năm. 20% vé máy bay/KS, 10% GD nước ngoài POS, 5% e-commerce ngoại tệ. FX 1.99%"
   },
   {
     "id": "mb-sakura",
     "bank": "MB Bank",
-    "name": "MB Sakura Cashback",
+    "name": "Sakura Cashback",
     "network": "JCB",
     "tier": "Platinum",
     "annual_fee": 0,
     "annual_fee_waiver": "Miễn phí",
+    "color": "#1565c0",
     "cashback_rules": [
-      {"category": "online", "label": "Mua sắm online", "rate": 5, "cap_monthly": 200000},
-      {"category": "dining", "label": "Ăn uống", "rate": 2, "cap_monthly": 100000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.3, "cap_monthly": null}
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 5,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 2,
+        "cap_monthly": 100000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
     ],
     "min_income": 5000000,
     "url": "https://www.mbbank.com.vn/the-tin-dung"
   },
   {
-    "id": "shinhan-cashback",
+    "id": "shinhan-platinum-cashback",
     "bank": "Shinhan",
-    "name": "Shinhan Visa Cashback",
+    "name": "Visa Platinum Cash Back",
     "network": "Visa",
     "tier": "Platinum",
     "annual_fee": 500000,
-    "annual_fee_waiver": "Miễn phí năm đầu",
+    "annual_fee_waiver": "Welcome cashback 1.1tr",
+    "color": "#0066b3",
     "cashback_rules": [
-      {"category": "dining", "label": "Ăn uống", "rate": 5, "cap_monthly": 300000},
-      {"category": "supermarket", "label": "Siêu thị", "rate": 3, "cap_monthly": 200000},
-      {"category": "other", "label": "Chi tiêu khác", "rate": 0.5, "cap_monthly": null}
+      {
+        "category": "dining",
+        "label": "Ăn uống (T7-CN)",
+        "rate": 5.4,
+        "cap_monthly": 300000,
+        "note": "Cần chi tiêu tổng 10tr/tháng"
+      },
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 0.4,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 20000000,
+    "url": "https://www.shinhan.com.vn/the-tin-dung",
+    "notes": "0.4% unlimited mọi chi tiêu + 5% thêm ăn uống cuối tuần"
+  },
+  {
+    "id": "shinhan-gold-cashback",
+    "bank": "Shinhan",
+    "name": "Visa Gold Cash Back",
+    "network": "Visa",
+    "tier": "Gold",
+    "annual_fee": 300000,
+    "annual_fee_waiver": "Welcome cashback 550k",
+    "color": "#0066b3",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Ăn uống (T7-CN)",
+        "rate": 5.3,
+        "cap_monthly": 200000,
+        "note": "Cần chi tiêu tổng 10tr/tháng"
+      },
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 12000000,
+    "url": "https://www.shinhan.com.vn/the-tin-dung"
+  },
+  {
+    "id": "vietinbank-visa-cashback",
+    "bank": "VietinBank",
+    "name": "Visa Platinum Cashback",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 399000,
+    "annual_fee_waiver": "Miễn phí khi chi tiêu 2tr/tháng đầu, năm sau chi tiêu 50tr",
+    "color": "#1a3c6e",
+    "cashback_rules": [
+      {
+        "category": "supermarket",
+        "label": "Siêu thị (MCC 5411)",
+        "rate": 6,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "online",
+        "label": "Thanh toán online",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
     ],
     "min_income": 7000000,
-    "url": "https://www.shinhan.com.vn/the-tin-dung"
+    "url": "https://www.vietinbank.vn/vietinbank-visa-platinum-cashback-20-html",
+    "notes": "Hoàn 6% siêu thị MCC 5411, 3% online. Cần chi tiêu tổng đủ điều kiện"
+  },
+  {
+    "id": "vietcombank-jcb",
+    "bank": "Vietcombank",
+    "name": "JCB Platinum",
+    "network": "JCB",
+    "tier": "Platinum",
+    "annual_fee": 800000,
+    "annual_fee_waiver": "Miễn phí thẻ phụ năm đầu",
+    "color": "#00703c",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Nhà hàng & Siêu thị",
+        "rate": 5,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.2,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 8000000,
+    "url": "https://www.vietcombank.com.vn/the-tin-dung",
+    "notes": "Cashback đến 7.2tr/năm. 5% nhà hàng/siêu thị (cap 300k/kỳ), 0.2% khác. BH du lịch 11.65 tỷ. 3% unlimited tại Nhật"
+  },
+  {
+    "id": "vietcombank-cashplus-amex",
+    "bank": "Vietcombank",
+    "name": "Cashplus Amex",
+    "network": "Amex",
+    "tier": "Platinum",
+    "annual_fee": 700000,
+    "annual_fee_waiver": "",
+    "color": "#00703c",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 1.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 8000000,
+    "url": "https://www.vietcombank.com.vn/the-tin-dung",
+    "notes": "Bảo hiểm du lịch 23 tỷ"
+  },
+  {
+    "id": "vietcombank-mc-world",
+    "bank": "Vietcombank",
+    "name": "Mastercard World",
+    "network": "Mastercard",
+    "tier": "World",
+    "annual_fee": 1500000,
+    "annual_fee_waiver": "",
+    "color": "#00703c",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 5,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 15000000,
+    "url": "https://www.vietcombank.com.vn/the-tin-dung"
+  },
+  {
+    "id": "bidv-jcb-ultimate",
+    "bank": "BIDV",
+    "name": "JCB Ultimate",
+    "network": "JCB",
+    "tier": "Ultimate",
+    "annual_fee": 2000000,
+    "annual_fee_waiver": "",
+    "color": "#00529b",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Ăn uống (tháng sinh nhật)",
+        "rate": 20,
+        "cap_monthly": 800000
+      },
+      {
+        "category": "dining",
+        "label": "Ăn uống (tháng thường)",
+        "rate": 10,
+        "cap_monthly": 800000
+      },
+      {
+        "category": "travel",
+        "label": "Fine dining Nhật",
+        "rate": 15,
+        "cap_monthly": null
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.15,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 30000000,
+    "url": "https://www.bidv.com.vn/the-tin-dung",
+    "notes": "Thẻ cao cấp, hoàn 100% phí chuyển đổi ngoại tệ tại Nhật"
+  },
+  {
+    "id": "seabank-visa-platinum",
+    "bank": "SeABank",
+    "name": "Visa Platinum",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí trọn đời",
+    "color": "#e8490f",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 6000000,
+    "url": "https://www.seabank.com.vn/the-tin-dung",
+    "notes": "3% unlimited mọi chi tiêu, FX fee 1.65%"
+  },
+  {
+    "id": "seabank-sea-easy",
+    "bank": "SeABank",
+    "name": "SeA-Easy",
+    "network": "Visa",
+    "tier": "Classic",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí trọn đời",
+    "color": "#e8490f",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 8,
+        "cap_monthly": 600000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.seabank.com.vn/the-tin-dung"
+  },
+  {
+    "id": "kbank-cashback-plus",
+    "bank": "KBank",
+    "name": "Cashback Plus",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#00a651",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 0.5,
+        "cap_monthly": 1000000
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.kasikornbank.com.vn/",
+    "notes": "Auto cashback, trả góp 0% 3 tháng, cashback 15% tại Thái Lan"
+  },
+  {
+    "id": "uob-one",
+    "bank": "UOB",
+    "name": "One Credit Card",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 1200000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#0b3d91",
+    "cashback_rules": [
+      {
+        "category": "taxi",
+        "label": "Grab & Taxi",
+        "rate": 10,
+        "cap_monthly": 600000
+      },
+      {
+        "category": "online",
+        "label": "Subscription (Spotify, Netflix...)",
+        "rate": 5,
+        "cap_monthly": 600000
+      },
+      {
+        "category": "online",
+        "label": "Mua sắm",
+        "rate": 2,
+        "cap_monthly": 600000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.uob.com.vn/the-tin-dung",
+    "notes": "Kế thừa KH Citibank, bảo hiểm mua sắm 4.5tr"
+  },
+  {
+    "id": "sc-simply-cash",
+    "bank": "Standard Chartered",
+    "name": "Simply Cash",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 800000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#0072aa",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.sc.com/vn/the-tin-dung",
+    "notes": "1% unlimited không giới hạn, không điều kiện"
+  },
+  {
+    "id": "liobank-cashback",
+    "bank": "LioBank",
+    "name": "Credit Card",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#ff6600",
+    "cashback_rules": [
+      {
+        "category": "custom",
+        "label": "2 danh mục tự chọn (6 options/tháng)",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://liobank.vn/",
+    "notes": "Chọn 2/6 danh mục mỗi tháng (taxi, giải trí, thời trang, quảng cáo...). Hoàn tiền ngay lập tức"
+  },
+  {
+    "id": "eximbank-jcb",
+    "bank": "Eximbank",
+    "name": "JCB Platinum",
+    "network": "JCB",
+    "tier": "Platinum",
+    "annual_fee": 400000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#004b87",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Chi tiêu nước ngoài",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 2,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 6000000,
+    "url": "https://www.eximbank.com.vn/the-tin-dung"
+  },
+  {
+    "id": "ocb-cashback",
+    "bank": "OCB",
+    "name": "Mastercard Cashback",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 399000,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#e31937",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Thanh toán online",
+        "rate": 3,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 6000000,
+    "url": "https://www.ocb.com.vn/the-tin-dung"
+  },
+  {
+    "id": "vpbank-gameon",
+    "bank": "VPBank",
+    "name": "GameON Mastercard",
+    "network": "Mastercard",
+    "tier": "Standard",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#00843d",
+    "cashback_rules": [
+      {
+        "category": "entertainment",
+        "label": "Giải trí số & Điện tử",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.vpbank.com.vn/ca-nhan/the-tin-dung",
+    "notes": "Tích điểm 10% gaming, streaming, giải trí số",
+    "reward_type": "points"
+  },
+  {
+    "id": "vpbank-s-rewards",
+    "bank": "VPBank",
+    "name": "S Rewards Mastercard",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí năm đầu",
+    "color": "#00843d",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Shopee & ShopeeFood",
+        "rate": 12,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.vpbank.com.vn/ca-nhan/the-tin-dung",
+    "notes": "12% Shopee xu, tặng gói ShopeeVIP 12 tháng",
+    "reward_type": "shopee_coins"
+  },
+  {
+    "id": "sc-journey",
+    "bank": "Standard Chartered",
+    "name": "Journey Visa Infinite",
+    "network": "Visa",
+    "tier": "Infinite",
+    "annual_fee": 2000000,
+    "annual_fee_waiver": "",
+    "color": "#0072aa",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Du lịch & Hàng không",
+        "rate": 3,
+        "cap_monthly": null
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 20000000,
+    "url": "https://www.sc.com/vn/credit-cards/",
+    "notes": "Tích dặm Bông Sen Vàng, phòng chờ sân bay",
+    "reward_type": "miles"
+  },
+  {
+    "id": "vib-max-card",
+    "bank": "VIB",
+    "name": "Max Card",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí trọn đời",
+    "color": "#003087",
+    "cashback_rules": [
+      {
+        "category": "custom",
+        "label": "5 danh mục tự chọn",
+        "rate": 10,
+        "cap_monthly": 1500000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 7000000,
+    "url": "https://www.vib.com.vn/vn/the-tin-dung",
+    "notes": "Hoàn 10% đến 18tr/năm, chọn 4 gói hội viên + 5 danh mục chi tiêu",
+    "reward_type": "points"
+  },
+  {
+    "id": "sacombank-jcb-ultimate",
+    "bank": "Sacombank",
+    "name": "JCB Ultimate",
+    "network": "JCB",
+    "tier": "Ultimate",
+    "annual_fee": 1699000,
+    "annual_fee_waiver": "",
+    "color": "#0d47a1",
+    "cashback_rules": [
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 15,
+        "cap_monthly": 1000000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 15000000,
+    "url": "https://www.sacombank.com.vn/ca-nhan/the/the-tin-dung.html",
+    "notes": "Hoàn 15% ăn uống, đặc quyền JCB Ultimate",
+    "reward_type": "cashback"
+  },
+  {
+    "id": "tpbank-evo",
+    "bank": "TPBank",
+    "name": "EVO Visa",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#6a1b9a",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Mua sắm online",
+        "rate": 3,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "dining",
+        "label": "Ăn uống",
+        "rate": 1,
+        "cap_monthly": 100000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://tpb.vn/ca-nhan/the/the-tin-dung"
+  },
+  {
+    "id": "shb-mastercard-business",
+    "bank": "SHB",
+    "name": "Mastercard Business Platinum",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 500000,
+    "annual_fee_waiver": "",
+    "color": "#0072bc",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Chi tiêu doanh nghiệp",
+        "rate": 1,
+        "cap_monthly": 500000
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.shb.com.vn/the-tin-dung/",
+    "notes": "Thẻ doanh nghiệp",
+    "reward_type": "points"
+  },
+  {
+    "id": "vietinbank-visa-signature",
+    "bank": "VietinBank",
+    "name": "Visa Signature",
+    "network": "Visa",
+    "tier": "Signature",
+    "annual_fee": 1499000,
+    "annual_fee_waiver": "",
+    "color": "#1a3c6e",
+    "cashback_rules": [
+      {
+        "category": "healthcare",
+        "label": "Y tế & Giáo dục",
+        "rate": 10,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "entertainment",
+        "label": "Golf",
+        "rate": 5,
+        "cap_monthly": 800000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.1,
+        "cap_monthly": null,
+        "note": "20 Loyalty points / 20,000 VND"
+      }
+    ],
+    "min_income": 15000000,
+    "url": "https://www.vietinbank.vn/en/ca-nhan/vietinbank-visa-signature-20-html",
+    "notes": "10% y tế/giáo dục, 5% golf. Tặng 1 round golf/1 đêm resort khi chi tiêu 50tr/30 ngày",
+    "reward_type": "cashback+points"
+  },
+  {
+    "id": "vietcombank-visa-platinum",
+    "bank": "Vietcombank",
+    "name": "Visa Platinum",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 800000,
+    "annual_fee_waiver": "",
+    "color": "#00703c",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 0.5,
+        "cap_monthly": null,
+        "note": "Tích điểm thưởng quy đổi quà"
+      }
+    ],
+    "min_income": 8000000,
+    "url": "https://www.vietcombank.com.vn/the-tin-dung",
+    "notes": "Tích điểm thưởng, miễn lãi đến 55 ngày",
+    "reward_type": "points"
+  },
+  {
+    "id": "vietcombank-vna-amex",
+    "bank": "Vietcombank",
+    "name": "Vietnam Airlines Amex Platinum",
+    "network": "Amex",
+    "tier": "Platinum",
+    "annual_fee": 1500000,
+    "annual_fee_waiver": "",
+    "color": "#00703c",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Hàng không & Du lịch",
+        "rate": 2,
+        "cap_monthly": null,
+        "note": "Tích dặm Bông Sen Vàng"
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null,
+        "note": "Tích dặm Lotusmiles"
+      }
+    ],
+    "min_income": 15000000,
+    "url": "https://www.vietcombank.com.vn/the-tin-dung",
+    "notes": "Tích dặm Bông Sen Vàng mỗi giao dịch, thành viên Titan",
+    "reward_type": "miles"
+  },
+  {
+    "id": "msb-visa-signature",
+    "bank": "MSB",
+    "name": "Visa Signature",
+    "network": "Visa",
+    "tier": "Signature",
+    "annual_fee": 999000,
+    "annual_fee_waiver": "",
+    "color": "#c8102e",
+    "cashback_rules": [
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 1,
+        "cap_monthly": 1000000
+      }
+    ],
+    "min_income": 10000000,
+    "url": "https://www.msb.com.vn/ca-nhan/the",
+    "notes": "Hoàn tiền đến 12tr/năm, thế giới ưu đãi JOY"
+  },
+  {
+    "id": "msb-visa-online",
+    "bank": "MSB",
+    "name": "Visa Online",
+    "network": "Visa",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#c8102e",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Chi tiêu online",
+        "rate": 3,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.msb.com.vn/ca-nhan/the",
+    "notes": "Hoàn tiền cho mọi chi tiêu online"
+  },
+  {
+    "id": "msb-mastercard-mdigi",
+    "bank": "MSB",
+    "name": "Mastercard mDigi",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 0,
+    "annual_fee_waiver": "Miễn phí",
+    "color": "#c8102e",
+    "cashback_rules": [
+      {
+        "category": "online",
+        "label": "Chi tiêu đa lĩnh vực",
+        "rate": 2,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.3,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 5000000,
+    "url": "https://www.msb.com.vn/ca-nhan/the",
+    "notes": "Hoàn tiền đa lĩnh vực, thế giới ưu đãi JOY"
+  },
+  {
+    "id": "msb-mc-world-elite",
+    "bank": "MSB",
+    "name": "Mastercard World Elite",
+    "network": "Mastercard",
+    "tier": "World Elite",
+    "annual_fee": 2000000,
+    "annual_fee_waiver": "",
+    "color": "#c8102e",
+    "cashback_rules": [
+      {
+        "category": "travel",
+        "label": "Du lịch & Phòng chờ sân bay",
+        "rate": 3,
+        "cap_monthly": 500000
+      },
+      {
+        "category": "other",
+        "label": "Tất cả chi tiêu",
+        "rate": 1,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 30000000,
+    "url": "https://www.msb.com.vn/ca-nhan/the",
+    "notes": "Đặc quyền giao dịch toàn cầu, phòng chờ sân bay không giới hạn"
+  },
+  {
+    "id": "msb-mc-green-world",
+    "bank": "MSB",
+    "name": "Mastercard Green World",
+    "network": "Mastercard",
+    "tier": "Platinum",
+    "annual_fee": 499000,
+    "annual_fee_waiver": "",
+    "color": "#c8102e",
+    "cashback_rules": [
+      {
+        "category": "taxi",
+        "label": "Di chuyển xanh (xe điện, taxi)",
+        "rate": 5,
+        "cap_monthly": 300000
+      },
+      {
+        "category": "travel",
+        "label": "Phòng chờ sân bay",
+        "rate": 2,
+        "cap_monthly": 200000
+      },
+      {
+        "category": "other",
+        "label": "Chi tiêu khác",
+        "rate": 0.5,
+        "cap_monthly": null
+      }
+    ],
+    "min_income": 7000000,
+    "url": "https://www.msb.com.vn/ca-nhan/the",
+    "notes": "Ưu đãi di chuyển xanh, voucher xanh SM, phòng chờ sân bay"
   }
 ]

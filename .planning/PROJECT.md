@@ -1,66 +1,53 @@
-# Cashback Optimizer
+# Cashback Optimizer v2
 
 ## What This Is
 
-Web app giúp người dùng thẻ tín dụng tại Việt Nam tối ưu hoàn tiền (cashback) bằng cách gợi ý thẻ phù hợp nhất cho từng danh mục chi tiêu. Nhập chi tiêu hàng tháng → hệ thống tính toán và đề xuất cách chia thẻ để hoàn tiền tối đa.
+Web app giúp người dùng thẻ tín dụng tại Việt Nam trả lời câu hỏi: **"Tôi sắp trả X đồng cho danh mục Y, nên dùng thẻ nào?"** — có tính đến trần hoàn tiền (cap) đã dùng trong tháng.
 
 ## Core Value
 
-**Người dùng nhập chi tiêu → nhận ngay gợi ý thẻ tối ưu cho từng danh mục → biết chính xác mình tiết kiệm được bao nhiêu.**
+**Mỗi lần thanh toán → mở app → nhập số tiền + danh mục → biết ngay thẻ nào tối ưu nhất → confirm → tự động log chi tiêu.**
 
-## Requirements
+## How It Works
 
-### Validated
+1. **Setup 1 lần**: User chọn thẻ đang có
+2. **Mỗi lần thanh toán**: Nhập số tiền + danh mục → hệ thống gợi ý thẻ tối ưu
+3. **Confirm**: User chọn thẻ → giao dịch tự động log, cap còn lại cập nhật
+4. **Điều chỉnh**: User có thể sửa/xóa log, nhập giao dịch ngoài app
+5. **Reset tự động**: Đầu tháng mới, cap reset về 0
 
-(None yet — ship to validate)
+### Optimization Logic
 
-### Active
-
-- [ ] Database thẻ cashback phổ biến tại VN (HSBC, Techcombank, VIB, VPBank, TPBank, ACB, Sacombank, MB, Shinhan)
-- [ ] Người dùng nhập chi tiêu theo danh mục (ăn uống, online, siêu thị, xăng, du lịch, y tế, giáo dục, khác)
-- [ ] Hệ thống gợi ý thẻ tối ưu cho từng danh mục chi tiêu
-- [ ] Tính toán tổng cashback ước tính/tháng (có tính cap)
-- [ ] So sánh: cashback hiện tại vs cashback tối ưu
-- [ ] Xem chi tiết từng thẻ (cashback rates, phí, điều kiện)
-- [ ] Responsive web, hoạt động tốt trên mobile
-- [ ] Giao diện tiếng Việt
-
-### Out of Scope
-
-- Kết nối ngân hàng / Open Banking — chưa có tại VN
-- Tracking giao dịch tự động — cần kết nối bank API
-- Mobile app native — web-first, mobile later
-- Đăng ký / đăng nhập — miễn phí, không cần auth ở v1
-- Affiliate links — chưa cần monetize ở v1
-- Promo/ưu đãi theo tháng — data thay đổi liên tục, phức tạp
+```
+Với mỗi thẻ user có:
+  cashback = min(amount × rate%, cap_monthly - used_this_month)
+  → Thẻ nào cashback cao nhất = gợi ý
+```
 
 ## Context
 
-- **Thị trường:** Việt Nam, thẻ tín dụng cashback đang phổ biến, nhiều người có 2-5 thẻ nhưng không biết tối ưu
-- **Cộng đồng:** Các group Facebook "Hội thẻ tín dụng Việt Nam" có 100k+ thành viên, bài so sánh thẻ luôn 100+ tương tác
-- **Pain point đã validate:** Người dùng không biết thẻ nào cashback cao nhất cho từng loại chi tiêu, quên ưu đãi, không track cap
-- **Data source:** Thông tin cashback từ website chính thức ngân hàng, cần cập nhật thủ công
-- **Rào cản:** Không có Open Banking tại VN, thông tin cashback thay đổi theo chương trình khuyến mãi
-- **Đã research:** 13 thẻ từ 9 ngân hàng, data lưu tại `data/cards.json`
+- **Thị trường:** Việt Nam, thẻ tín dụng cashback phổ biến, nhiều người có 2-5 thẻ
+- **Pain point:** Không biết thẻ nào tối ưu cho giao dịch cụ thể, quên cap đã dùng
+- **Data source:** 13 thẻ từ 9 ngân hàng, lưu tại `data/cards.json`
+- **Khác biệt vs v1:** Từ "phân bổ lý thuyết" → "gợi ý real-time per giao dịch"
 
 ## Constraints
 
-- **Tech stack**: Python (Flask) + vanilla HTML/CSS/JS — đơn giản, nhanh, anh Triều quen Python
+- **Tech stack**: Python (Flask) + vanilla HTML/CSS/JS
+- **Storage**: localStorage (không cần auth, không cần backend DB)
 - **Timeline**: MVP trong 1-2 tuần
-- **Budget**: $0 — miễn phí hosting (Vercel/Railway free tier hoặc static)
-- **Data**: Cập nhật thủ công từ website ngân hàng, không có API
-- **No auth**: v1 không cần đăng nhập, tất cả miễn phí
-- **SEO**: Cần SEO tốt để thu hút organic traffic từ Google
+- **Budget**: $0
+- **No auth**: v1 không cần đăng nhập
 
 ## Key Decisions
 
-| Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Web app, không mobile app | Web-first, dễ SEO, dễ share link, không cần app store | — Pending |
-| Miễn phí, không monetize v1 | Tập trung user acquisition trước, monetize sau | — Pending |
-| Flask + vanilla frontend | Đơn giản nhất, anh Triều quen Python, không cần framework nặng | — Pending |
-| Data thẻ dạng JSON file | Không cần database phức tạp cho 13 thẻ, dễ cập nhật | — Pending |
-| Tiếng Việt only | Target market là VN, không cần đa ngôn ngữ | — Pending |
+| Decision | Rationale |
+|----------|-----------|
+| Log tự động khi confirm gợi ý | Zero friction, data tích lũy tự nhiên |
+| Cho phép điều chỉnh thủ công | User có giao dịch ngoài app |
+| localStorage, không backend DB | Đơn giản, không cần auth, privacy |
+| Auto reset đầu tháng | Cap cashback tính theo tháng |
+| Vẫn giữ trang so sánh thẻ | SEO + giá trị tham khảo |
 
 ---
-*Last updated: 2026-04-17 after project initialization*
+*Last updated: 2026-04-17 — Redesign v2: real-time per-transaction recommendation*

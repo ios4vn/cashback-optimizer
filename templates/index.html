@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashback Optimizer — Nên trả bằng thẻ nào?</title>
+    <meta name="description" content="Công cụ miễn phí giúp bạn chọn thẻ tín dụng tối ưu cashback cho mỗi giao dịch. Tính cap còn lại, gợi ý thẻ tốt nhất ngay lập tức.">
+    <meta name="keywords" content="cashback, thẻ tín dụng, hoàn tiền, so sánh thẻ, Việt Nam">
+    <meta property="og:title" content="Cashback Optimizer — Nên trả bằng thẻ nào?">
+    <meta property="og:description" content="Chọn thẻ tối ưu cashback cho mỗi giao dịch. Tính cap còn lại real-time.">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#00d4aa">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cashback">
+    <link rel="apple-touch-icon" href="/static/icon-192.png">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+        <span class="nav-brand">💳 Cashback</span>
+        <div class="nav-tabs">
+            <button class="nav-tab active" data-tab="recommend">Gợi ý</button>
+            <button class="nav-tab" data-tab="history">Lịch sử</button>
+            <button class="nav-tab" data-tab="mycards">Thẻ của tôi</button>
+            <button class="nav-tab" data-tab="compare">So sánh</button>
+        </div>
+    </div>
+    <div class="install-banner hidden" id="install-banner">
+        <span>📲 Thêm vào màn hình chính để dùng nhanh hơn</span>
+        <button class="btn btn-sm btn-primary" id="btn-install">Cài đặt</button>
+        <button class="btn-close" id="btn-dismiss-install">✕</button>
+    </div>
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- Tab: Recommend -->
+    <section class="tab-content active" id="tab-recommend">
+        <div class="section">
+            <h1 class="page-title">Nên trả bằng thẻ nào?</h1>
+            <p class="hint">Nhập số tiền và danh mục → xem thẻ nào cashback cao nhất</p>
+
+            <div class="rec-form">
+                <div class="form-group">
+                    <label for="rec-amount">Số tiền</label>
+                    <div class="input-wrap">
+                        <input type="text" id="rec-amount" placeholder="VD: 500k, 2tr, 5000000" inputmode="numeric" autofocus>
+                        <span class="unit">đ</span>
+                    </div>
+                    <div class="quick-amounts">
+                        <button type="button" class="chip" data-amount="100000">100k</button>
+                        <button type="button" class="chip" data-amount="200000">200k</button>
+                        <button type="button" class="chip" data-amount="500000">500k</button>
+                        <button type="button" class="chip" data-amount="1000000">1tr</button>
+                        <button type="button" class="chip" data-amount="2000000">2tr</button>
+                        <button type="button" class="chip" data-amount="5000000">5tr</button>
+                        <button type="button" class="chip" data-amount="10000000">10tr</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rec-category">Danh mục</label>
+                    <select id="rec-category">
+                        {% for cat in categories %}
+                        <option value="{{ cat.id }}">{{ cat.icon }} {{ cat.label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button class="btn btn-primary btn-full" id="btn-recommend">Gợi ý thẻ 🚀</button>
+            </div>
+
+            <div id="rec-results" class="hidden">
+                <h2 class="section-title">Kết quả</h2>
+                <div id="rec-list"></div>
+            </div>
+
+            <div id="no-cards-warning" class="hidden">
+                <div class="empty-state">
+                    <p>⚠️ Bạn chưa chọn thẻ nào.</p>
+                    <button class="btn btn-secondary" onclick="switchTab('mycards')">Chọn thẻ của tôi →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab: History -->
+    <section class="tab-content" id="tab-history">
+        <div class="section">
+            <div class="section-header">
+                <h1 class="page-title">Lịch sử tháng này</h1>
+                <button class="btn btn-sm btn-secondary" id="btn-add-manual">+ Thêm giao dịch</button>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="summary-cards" id="dashboard-summary"></div>
+
+            <!-- Cap Tracker -->
+            <div id="cap-tracker"></div>
+
+            <!-- Transaction List -->
+            <div id="tx-list"></div>
+
+            <div id="tx-empty" class="empty-state hidden">
+                <p>Chưa có giao dịch nào trong tháng này.</p>
+                <button class="btn btn-secondary" onclick="switchTab('recommend')">Bắt đầu gợi ý →</button>
+            </div>
+        </div>
+
+        <!-- Manual Add Modal -->
+        <div class="modal hidden" id="modal-add">
+            <div class="modal-content">
+                <h3 id="modal-add-title">Thêm giao dịch</h3>
+                <div class="form-group">
+                    <label>Số tiền</label>
+                    <div class="input-wrap">
+                        <input type="text" id="manual-amount" placeholder="0" inputmode="numeric">
+                        <span class="unit">đ</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Danh mục</label>
+                    <select id="manual-category">
+                        {% for cat in categories %}
+                        <option value="{{ cat.id }}">{{ cat.icon }} {{ cat.label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Thẻ</label>
+                    <select id="manual-card"></select>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+                    <button class="btn btn-primary" id="btn-save-manual">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab: My Cards -->
+    <section class="tab-content" id="tab-mycards">
+        <div class="section">
+            <h1 class="page-title">Thẻ của tôi</h1>
+            <p class="hint">Chọn các thẻ tín dụng bạn đang sở hữu</p>
+            <input type="text" id="card-search" class="search-input" placeholder="🔍 Tìm thẻ theo tên, ngân hàng...">
+            <div class="card-grid" id="card-grid"></div>
+        </div>
+    </section>
+
+    <!-- Tab: Compare -->
+    <section class="tab-content" id="tab-compare">
+        <div class="section">
+            <h1 class="page-title">So sánh thẻ cashback</h1>
+            <div class="compare-table-wrap">
+                <table class="data-table" id="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Thẻ</th>
+                            <th>Phí/năm</th>
+                            <th>Cashback nổi bật</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Toast -->
+<div class="toast hidden" id="toast"></div>
+
+<footer>
+    <div class="container">
+        <p>Cashback Optimizer — Công cụ miễn phí. Dữ liệu tham khảo từ website ngân hàng.</p>
+    </div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

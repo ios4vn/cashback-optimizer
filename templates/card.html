@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ card.name }} — Cashback Optimizer</title>
+    <meta name="description" content="Chi tiết thẻ {{ card.name }} từ {{ card.bank }}: cashback rates, phí thường niên, điều kiện.">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="hero hero-sm">
+        <div class="container">
+            <a href="/" class="back-link">← Quay lại trang chủ</a>
+            <div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:0.5rem">
+                <div style="width:120px;height:75px;border-radius:10px;background:linear-gradient(135deg, {{ card.get('color', '#333') }}, {{ card.get('color', '#333') }}dd);display:flex;flex-direction:column;justify-content:space-between;padding:10px 12px;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.4)">
+                    <div style="font-weight:700;font-size:0.75rem">{{ card.bank }}</div>
+                    <div style="width:20px;height:14px;background:rgba(255,255,255,0.3);border-radius:3px;border:1px solid rgba(255,255,255,0.4)"></div>
+                    <div style="text-align:right;font-weight:700;font-size:0.7rem;opacity:0.8">{{ card.network }}</div>
+                </div>
+            </div>
+            <h1>{{ card.name }}</h1>
+            <p class="subtitle">{{ card.bank }} · {{ card.network }} {{ card.tier }}</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card-section">
+            <div class="detail-grid">
+                <div class="detail-box">
+                    <h3>💰 Phí thường niên</h3>
+                    <p class="big-number">{% if card.annual_fee == 0 %}Miễn phí{% else %}{{ "{:,.0f}".format(card.annual_fee) }}đ{% endif %}</p>
+                    {% if card.annual_fee_waiver %}<p class="note">{{ card.annual_fee_waiver }}</p>{% endif %}
+                </div>
+                <div class="detail-box">
+                    <h3>💵 Thu nhập tối thiểu</h3>
+                    <p class="big-number">{{ "{:,.0f}".format(card.min_income) }}đ</p>
+                </div>
+            </div>
+
+            <h3>📊 Bảng cashback</h3>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Danh mục</th>
+                        <th>Tỷ lệ hoàn tiền</th>
+                        <th>Giới hạn/tháng</th>
+                        {% if card.cashback_rules[0].get('rate_payroll') %}<th>Nhận lương qua NH</th>{% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rule in card.cashback_rules %}
+                    <tr>
+                        <td>{{ rule.label }}</td>
+                        <td><strong>{{ rule.rate }}%</strong></td>
+                        <td>{% if rule.cap_monthly %}{{ "{:,.0f}".format(rule.cap_monthly) }}đ{% else %}Không giới hạn{% endif %}</td>
+                        {% if rule.get('rate_payroll') %}<td>{{ rule.rate_payroll }}%</td>{% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if card.get('notes') %}
+            <div class="detail-box" style="margin-top:1.5rem">
+                <h3>📝 Ghi chú</h3>
+                <p>{{ card.notes }}</p>
+            </div>
+            {% endif %}
+
+            {% if card.get('url') %}
+            <a href="{{ card.url }}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1.5rem">Xem trên website ngân hàng ↗</a>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Cashback Optimizer — Dữ liệu tham khảo, vui lòng kiểm tra website ngân hàng để có thông tin mới nhất.</p>
+        </div>
+    </footer>
+</body>
+</html>

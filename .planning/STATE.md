@@ -2,53 +2,41 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-17)
+See: .planning/PROJECT.md
 
-**Core value:** Người dùng nhập chi tiêu → nhận gợi ý thẻ tối ưu → biết chính xác tiết kiệm bao nhiêu
-**Current focus:** Phase 1 - Data Foundation
+**Core value:** Mỗi lần thanh toán → biết ngay thẻ nào tối ưu → confirm → tự log
+**Current focus:** Phase 1 - Foundation + Card Setup
 
 ## Current Position
 
-Phase: 1 of 5 (Data Foundation)
-Plan: 0 of TBD in current phase
+Phase: 1 of 5 (Foundation + Card Setup)
+Plan: 0 of TBD
 Status: Ready to plan
-Last activity: 2026-04-17 — Project initialized with GSD workflow
+Last activity: 2026-04-17 — v2 redesign, planning docs updated
 
 Progress: [░░░░░░░░░░] 0%
-
-## Performance Metrics
-
-**Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
-
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| - | - | - | - |
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
+- [v2 Redesign]: Chuyển từ "phân bổ lý thuyết" → "gợi ý per giao dịch real-time"
+- [v2 Redesign]: Log tự động khi confirm + cho phép điều chỉnh thủ công
+- [v2 Redesign]: localStorage cho storage, auto reset đầu tháng
+- [v1 code]: Có sẵn Flask app + templates + CSS từ v1, cần refactor
 
-- [Init]: Web app Flask + vanilla JS, data JSON, miễn phí, tiếng Việt only
-- [Init]: 13 thẻ từ 9 ngân hàng đã research, data sẵn tại data/cards.json
+### Existing Code (from v1)
 
-### Pending Todos
-
-None yet.
+- `app.py` — Flask app, cần refactor optimize engine
+- `templates/index.html` — Cần redesign cho flow mới
+- `templates/card.html` — Giữ lại, polish
+- `static/style.css` — Giữ dark theme, refactor layout
+- `static/app.js` — Cần rewrite cho flow mới
+- `data/cards.json` — Giữ nguyên
 
 ### Blockers/Concerns
 
-- Data thẻ cashback cần verify lại với website ngân hàng (một số thông tin có thể outdated)
+- Không có
 
-## Session Continuity
-
-Last session: 2026-04-17 00:27
-Stopped at: Project initialization complete
-Resume file: None
+---
+*Last updated: 2026-04-17*
